@@ -39,7 +39,7 @@ class empleados extends Conexion{
         $sql = "SELECT * from empleados where emp_situacion = 1 ";
 
         if($this->emp_nom != ''){
-            $sql .= " and producto_nombre like '%$this->emp_nom%' ";
+            $sql .= " and emp_nom like '%$this->emp_nom%' ";
         }
 
         if($this->emp_dpi != ''){
