@@ -15,10 +15,10 @@
                     </a>
                     <ul class="dropdown-menu bg-dark">
                         <li class="nav-item">
-                            <a class="nav-link" href="/crud_practica9/controladores/ventas/detalle_ventas.php">Listado de empleados</a>
+                            <a class="nav-link" href="/Final_Reyes/controladores/ventas/detalle_ventas.php">Listado de empleados</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/crud_practica9/vistas/ventas/buscar.php">Buscar Empleado</a>
+                            <a class="nav-link" href="/Final_Reyes/vistas/ventas/buscar.php">Buscar Empleado</a>
                         </li>
                     </ul>
                 </li>
@@ -28,7 +28,7 @@
                     </a>
                     <ul class="dropdown-menu bg-dark">
                         <li class="nav-item">
-                            <a class="nav-link" href="/crud_practica9/vistas/productos/index.php">Empleado Nuevo</a>
+                            <a class="nav-link" href="/Final_Reyes/vistas/productos/index.php">Empleado Nuevo</a>
                         </li>
                     </ul>
                 </li>
@@ -38,10 +38,10 @@
                     </a>
                     <ul class="dropdown-menu bg-dark">
                         <li class="nav-item">
-                            <a class="nav-link" href="/crud_practica9/vistas/clientes/index.php">Crear Area</a>
+                            <a class="nav-link" href="/Final_Reyes/vistas/clientes/index.php">Crear Area</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/crud_practica9/vistas/clientes/buscar.php">Buscar Area</a>
+                            <a class="nav-link" href="/Final_Reyes/vistas/clientes/buscar.php">Buscar Area</a>
                         </li>
                     </ul>
                 </li>
