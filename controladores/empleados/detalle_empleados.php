@@ -48,9 +48,9 @@ try {
                                     <td><?= $key + 1 ?></td>
                                     <td><?= $venta['EMP_NOM'] ?></td>
                                     <td><?= $venta ['EMP_DPI'] ?></td>
-                                    <td><?= $venta['EMP_PUESTO_COD'] ?></td>
-                                    <td><?= $venta['EMP_SEX_COD'] ?></td>
+                                    <td><?= $venta['PUE_DESCR'] ?></td>
                                     <td><?= $venta['EMP_EDAD'] ?></td>
+                                    <td><?= $venta['SEX_DESCR'] ?></td>
                                     <td><?= $venta['SUELDO'] ?></td>
                                     <td><a class="btn btn-info w-100" href="/crud_practica9/vistas/ventas/factura.php?venta_id=<?php echo $venta['DETALLE_ID'] ?>">VER DETALLE</a></td>
                                 </tr>
