@@ -5,30 +5,30 @@ CREATE TABLE empleados (
     emp_nom VARCHAR(200) NOT NULL,
     emp_ape VARCHAR(200) NOT NULL,
     emp_dpi BIGINT NOT NULL,
-    emp_puesto_cod INTEGER NOT NULL,
+    emp_puesto_cod VARCHAR(40) NOT NULL,
     emp_edad INTEGER NOT NULL,
-    emp_sex_cod INTEGER NOT NULL,
+    emp_sex_cod VARCHAR(35) NOT NULL,
     emp_area_cod INTEGER NOT NULL,
     emp_situacion char (1) DEFAULT '1',
     PRIMARY KEY(emp_cod),
     FOREIGN KEY (emp_area_cod) REFERENCES areas(area_cod),
-    FOREIGN KEY (emp_puesto_cod) REFERENCES puestos(pue_cod),
-    FOREIGN KEY (emp_sex_cod) REFERENCES sexo(sex_cod)
+    FOREIGN KEY (emp_puesto_cod) REFERENCES puestos(pue_descr),
+    FOREIGN KEY (emp_sex_cod) REFERENCES sexo(sex_descr)
 );
 
 CREATE TABLE sexo  ( 
 	sex_cod	INTEGER NOT NULL,
-	sex_descr	VARCHAR(200) NOT NULL,
+	sex_descr	VARCHAR(35) NOT NULL,
     sex_situacion char (1) DEFAULT '1',
-    PRIMARY KEY(sex_cod)
+    PRIMARY KEY(sex_descr)
 )
 
 CREATE TABLE puestos  ( 
 	pue_cod	INTEGER NOT NULL,
-	pue_descr	VARCHAR(200) NOT NULL,
+	pue_descr	VARCHAR(40) NOT NULL,
     pue_suel DECIMAL(8,2),
     pue_situacion char (1) DEFAULT '1',
-    PRIMARY KEY(pue_cod)
+    PRIMARY KEY(pue_descr)
 )
 
 CREATE TABLE areas  ( 
