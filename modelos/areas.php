@@ -25,24 +25,14 @@ class areas extends Conexion{
 
 
     //==============================================================================
-    public function buscar(){
-        $sql = "SELECT * FROM areas";
-
-        if($this->emp_nom != ''){
-            $sql .= " and emp_nom like '%$this->emp_nom%' ";
-        }
-
-        if($this->emp_dpi != ''){
-            $sql .= " and emp_dpi = $this->emp_dpi ";
-        }
-
-        if($this->emp_cod != null){
-            $sql .= " and emp_cod = $this->emp_cod ";
-        }
-
+    public function buscar()
+    {
+        $sql = "SELECT area_cod, area_nom FROM areas WHERE area_situacion = 1";
+    
         $resultado = self::servir($sql);
         return $resultado;
     }
+    
 
 
     //===================================================================================

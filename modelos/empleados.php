@@ -35,28 +35,30 @@ class empleados extends Conexion{
 
 
     //==============================================================================
-    public function buscar(){
-        $sql = "SELECT emp_nom, emp_dpi, pue_descr, emp_edad, sex_descr, pue_suel AS sueldo
-        FROM empleados
-        JOIN puestos ON empleados.emp_puesto_cod = puestos.pue_descr
-        JOIN sexo ON empleados.emp_sex_cod = sexo.sex_descr
-        WHERE emp_situacion = 1 AND pue_situacion = 1";
+    public function buscar()
+{
+    $sql = "SELECT emp_nom, emp_dpi, puestos.pue_descr, emp_edad, sexo.sex_descr, puestos.pue_suel AS sueldo, areas.area_nom
+            FROM empleados
+            JOIN puestos ON empleados.emp_puesto_cod = puestos.pue_descr
+            JOIN sexo ON empleados.emp_sex_cod = sexo.sex_descr
+            JOIN areas ON empleados.emp_area_cod = areas.area_nom
+            WHERE emp_situacion = 1 AND pue_situacion = 1";
 
-        if($this->emp_nom != ''){
-            $sql .= " and emp_nom like '%$this->emp_nom%' ";
-        }
-
-        if($this->emp_dpi != ''){
-            $sql .= " and emp_dpi = $this->emp_dpi ";
-        }
-
-        if($this->emp_cod != null){
-            $sql .= " and emp_cod = $this->emp_cod ";
-        }
-
-        $resultado = self::servir($sql);
-        return $resultado;
+    if ($this->emp_nom != '') {
+        $sql .= " AND emp_nom LIKE '%$this->emp_nom%' ";
     }
+
+    if ($this->emp_dpi != '') {
+        $sql .= " AND emp_dpi = $this->emp_dpi ";
+    }
+
+    if ($this->emp_cod != null) {
+        $sql .= " AND emp_cod = $this->emp_cod ";
+    }
+
+    $resultado = self::servir($sql);
+    return $resultado;
+}
 
 
     //===================================================================================
