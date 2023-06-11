@@ -27,7 +27,7 @@ class empleados extends Conexion{
     }
 
     public function guardar(){
-        $sql = "INSERT INTO empleados(emp_nom,emp_ape,emp_dpi,pue_descr,emp_edad,emp_sex_cod,emp_area_cod) 
+        $sql = "INSERT INTO empleados(emp_nom,emp_ape,emp_dpi,emp_puesto_cod,emp_edad,emp_sex_cod,emp_area_cod) 
                 values('$this->emp_nom','$this->emp_ape','$this->emp_dpi','$this->emp_puesto_cod','$this->emp_edad','$this->emp_sex_cod','$this->emp_area_cod')";
         $resultado = self::ejecutar($sql);
         return $resultado;

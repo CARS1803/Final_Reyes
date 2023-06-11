@@ -26,9 +26,8 @@
                     <div class="col">
                         <label for="emp_puesto_cod">Puesto a Desempeñar</label>
                         <select name="emp_puesto_cod" id="emp_puesto_cod" class="form-control">
-                            <option value="emp_puesto_cod">Recursos Humanos</option>
-                            <option value="emp_puesto_cod">Logistica</option>
-                            <option value="emp_puesto_cod">Inteligencia</option>
+                            <option value="Encargado de Area">Encargado de Area</option>
+                            <option value="Oficinista">Oficinista</option>
                         </select>
                     </div>
                 </div>
@@ -41,14 +40,18 @@
                 <div class="col">
                         <label for="emp_puesto_cod">Genero del Empleado</label>
                         <select name="emp_sex_cod" id="emp_sex_cod" class="form-control">
-                            <option value="emp_sex_cod">Masculino</option>
-                            <option value="emp_sex_cod">Femenino</option>
+                            <option value="Masculino">Masculino</option>
+                            <option value="Femenino">Femenino</option>
                         </select>
-                    </div>
+                </div>
                 <div class="row mb-3">
                     <div class="col">
-                        <label for="emp_area_cod">Numero de Area donde se Desempeña</label>
-                        <input type="number" min="1" name="emp_area_cod" id="emp_area_cod" class="form-control">
+                        <label for="emp_area_cod">Area a Desempeñar</label>
+                        <select name="emp_area_cod" id="emp_area_cod" class="form-control">
+                            <option value="Recursos Humanos">Recursos Humanos</option>
+                            <option value="Logistica">Logistica</option>
+                            <option value="Inteligencia">Inteligencia</option>
+                        </select>
                     </div>
                 </div>
                 <div class="row mb-3">
