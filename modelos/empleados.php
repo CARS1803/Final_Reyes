@@ -37,9 +37,10 @@ class empleados extends Conexion{
     //==============================================================================
     public function buscar(){
         $sql = "SELECT emp_nom, emp_dpi, pue_descr, emp_edad, sex_descr, pue_suel AS sueldo
-        FROM empleados, puestos , sexo
-        WHERE emp_situacion = 1
-        AND pue_situacion = 1";
+        FROM empleados
+        JOIN puestos ON empleados.emp_puesto_cod = puestos.pue_descr
+        JOIN sexo ON empleados.emp_sex_cod = sexo.sex_descr
+        WHERE emp_situacion = 1 AND pue_situacion = 1";
 
         if($this->emp_nom != ''){
             $sql .= " and emp_nom like '%$this->emp_nom%' ";
