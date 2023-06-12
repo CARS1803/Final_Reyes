@@ -79,10 +79,10 @@ try {
                     </a>
                     <ul class="dropdown-menu bg-dark">
                         <li class="nav-item">
-                            <a class="nav-link" href="/Final_Reyes/vistas/area/index.php">Crear Puestos</a>
+                            <a class="nav-link" href="/Final_Reyes/vistas/puestos/index.php">Crear Puestos</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/Final_Reyes/vistas/area/buscar.php">Buscar Puestos</a>
+                            <a class="nav-link" href="/Final_Reyes/vistas/puestos/buscar.php">Buscar Puestos</a>
                         </li>
                     </ul>
                 </li>
@@ -93,10 +93,10 @@ try {
                     </a>
                     <ul class="dropdown-menu bg-dark">
                         <li class="nav-item">
-                            <a class="nav-link" href="/Final_Reyes/vistas/area/index.php">Crear Genero</a>
+                            <a class="nav-link" href="/Final_Reyes/vistas/generos/index.php">Crear Genero</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/Final_Reyes/vistas/area/buscar.php">Buscar Genero</a>
+                            <a class="nav-link" href="/Final_Reyes/vistas/generos/buscar.php">Buscar Genero</a>
                         </li>
                     </ul>
                 </li>
