@@ -1,5 +1,21 @@
 <?php include_once '../../includes/header.php'?>
 <?php include_once '../../includes/navbar.php'?>
+<?php
+require_once '../../modelos/puestos.php';
+
+    try {
+        $puesto = new puestos();
+
+        $puestos = $puesto->buscar();
+
+            // var_dump($clientes);
+            // exit;
+    } catch (PDOException $e) {
+        $error = $e->getMessage();
+    } catch (Exception $e2){
+        $error = $e2->getMessage();
+    }
+?>
     <div class="container">
         <h1 class="text-center">Formulario de empleados</h1>
         <div class="row justify-content-center">
@@ -16,15 +32,19 @@
                         <input type="number" min="1" name="emp_dpi" id="emp_dpi" class="form-control">
                     </div>
                 </div>
+                
                 <div class="row mb-3">
                     <div class="col">
-                        <label for="emp_puesto_cod">Puesto a Desempeñar</label>
-                        <select name="emp_puesto_cod" id="emp_puesto_cod" class="form-control">
-                            <option value="Encargado de Area">Encargado de Area</option>
-                            <option value="Oficinista">Oficinista</option>
+                        <label for="pue_descr">Puesto a Desempeñar</label>
+                        <select name="pue_descr" id="pue_descr" class="form-control">
+                            <option value="">Seleccione el Puesto</option>
+                            <?php foreach ($puestos as $key => $puesto) : ?>
+                                <option value="<?= $puesto['PUE_COD'] ?>"><?= $puesto['PUE_DESCR'] ?></option>
+                            <?php endforeach?>
                         </select>
                     </div>
                 </div>
+
                 <div class="row mb-3">
                     <div class="col">
                         <label for="emp_edad">Edad del Empleado</label>
