@@ -36,6 +36,7 @@ try {
                             <th>NO.</th>
                             <th>NOMBRE DEL PUESTO</th>
                             <th>MODIFICAR</th>
+                            <th>ELIMINAR</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -46,6 +47,7 @@ try {
                             <td><?= $key + 1 ?></td>
                             <td><?= $puesto['PUE_DESCR'] ?></td>
                             <td><a class="btn btn-warning w-100" href="/Final_Reyes/vistas/puestos/modificar.php?pue_cod=<?= $puesto['PUE_COD']?>">Modificar</a></td>
+                            <td><a class="btn btn-danger w-100" href="/Final_Reyes/controladores/puestos/eliminar.php?pue_cod=<?= $puesto['PUE_COD']?>">Eliminar</a></td>
                         </tr>
                         <?php endforeach ?>
                         <?php else :?>
