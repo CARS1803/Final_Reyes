@@ -108,7 +108,7 @@ try {
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-lg-8">
-            <br><h1 class="text-center">Listado de Empleados De Empleados por Areas</h1>
+            <br><h1 class="text-center">Listado De Empleados por Areas</h1>
             <br>
             <style>
     .areas-container {
