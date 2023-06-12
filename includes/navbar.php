@@ -7,7 +7,7 @@
             <a class="navbar-brand" href="#">Registro de Personal</a>
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                    <a class="nav-link active" aria-current="page" href="/Final_Reyes/controladores/empleados/detalle_empleados.php">Inicio</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -41,7 +41,10 @@
                             <a class="nav-link" href="/Final_Reyes/vistas/area/index.php">Crear Areas y Puestos</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/Final_Reyes/vistas/area/buscar.php">Modificar Areas</a>
+                            <a class="nav-link" href="/Final_Reyes/vistas/area/buscar.php">Buscar Areas</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/Final_Reyes/vistas/area/buscar.php">Buscar Puestos</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="/Final_Reyes/vistas/area/buscar.php">Detalles de Areas</a>
