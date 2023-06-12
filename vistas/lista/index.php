@@ -3,12 +3,16 @@
 <?php
 require_once '../../modelos/puestos.php';
 require_once '../../modelos/areas.php';
+require_once '../../modelos/generos.php';
     try {
         $puesto = new puestos();
         $puestos = $puesto->buscar();
 
         $area = new areas();
         $areas = $area->buscar();
+
+        $genero = new Generos();
+        $generos = $genero->buscar();
             // var_dump($clientes);
             // exit;
     } catch (PDOException $e) {
@@ -52,12 +56,16 @@ require_once '../../modelos/areas.php';
                         <input type="number" min="1" name="emp_edad" id="emp_edad" class="form-control">
                     </div>
                 </div>
-                <div class="col">
-                        <label for="emp_puesto_cod">Genero del Empleado</label>
+                <div class="row mb-3">
+                    <div class="col">
+                        <label for="emp_sex_cod">Genero</label>
                         <select name="emp_sex_cod" id="emp_sex_cod" class="form-control">
-                            <option value="Masculino">Masculino</option>
-                            <option value="Femenino">Femenino</option>
+                            <option value="">Seleccione...</option>
+                            <?php foreach ($generos as $key => $genero) : ?>
+                                <option value="<?= $genero['SEX_DESCR'] ?>"><?= $genero['SEX_DESCR'] ?></option>
+                            <?php endforeach?>
                         </select>
+                    </div>
                 </div>
                 
                 <div class="row mb-3">
