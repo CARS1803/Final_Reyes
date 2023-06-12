@@ -47,7 +47,7 @@ try {
                             <td><?= $key + 1 ?></td>
                             <td><?= $genero['SEX_DESCR'] ?></td>
                             <td><a class="btn btn-warning w-100" href="/Final_Reyes/vistas/generos/modificar.php?sex_cod=<?= $genero['SEX_COD']?>">Modificar</a></td>
-                            <td><a class="btn btn-danger w-100" href="/Final_Reyes/controladores/empleados/eliminar.php?emp_cod=<?= $empleado['EMP_COD']?>">Eliminar</a></td>
+                            <td><a class="btn btn-danger w-100" href="/Final_Reyes/controladores/generos/eliminar.php?sex_cod=<?= $genero['SEX_COD']?>">Eliminar</a></td>
                         </tr>
                         <?php endforeach ?>
                         <?php else :?>

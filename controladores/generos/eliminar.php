@@ -1,10 +1,10 @@
 <?php
-require '../../modelos/areas.php';
+require '../../modelos/generos.php';
 
 
     try {
-        $area = new areas($_GET);
-        $resultado = $area->eliminar();
+        $genero = new Generos($_GET);
+        $resultado = $genero->eliminar();
 
     } catch (PDOException $e) {
         $error = $e->getMessage();
@@ -47,7 +47,7 @@ require '../../modelos/areas.php';
         </div>
         <div class="row">
             <div class="col-lg-4">
-                <a href="/Final_Reyes/vistas/area/buscar.php" class="btn btn-info">Volver al formulario</a>
+                <a href="/Final_Reyes/vistas/generos/buscar.php" class="btn btn-info">Volver al formulario</a>
             </div>
         </div>
     </div>

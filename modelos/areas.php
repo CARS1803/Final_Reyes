@@ -59,7 +59,16 @@ class areas extends Conexion{
         
         $resultado = self::ejecutar($sql);
         return $resultado;
-    }}
+    }
 
 
     //======================================================================================
+
+    public function eliminar(){
+        $sql = "UPDATE areas SET area_situacion = 0 where area_cod = $this->area_cod";
+        
+        $resultado = self::ejecutar($sql);
+        return $resultado;
+    }
+
+}    
