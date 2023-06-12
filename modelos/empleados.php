@@ -37,7 +37,7 @@ class empleados extends Conexion{
     //==============================================================================
     public function buscar()
 {
-    $sql = "SELECT emp_nom, emp_dpi, puestos.pue_descr, emp_edad, sexo.sex_descr, puestos.pue_suel AS sueldo, areas.area_nom
+    $sql = "SELECT emp_cod,emp_nom, emp_dpi, puestos.pue_descr, emp_edad, sexo.sex_descr, puestos.pue_suel AS sueldo, areas.area_nom
             FROM empleados
             JOIN puestos ON empleados.emp_puesto_cod = puestos.pue_descr
             JOIN sexo ON empleados.emp_sex_cod = sexo.sex_descr
@@ -60,7 +60,24 @@ class empleados extends Conexion{
     return $resultado;
 }
 
+public function buscar2(){
+    $sql = "SELECT * from empleados where emp_situacion = 1 ";
 
+    if($this->emp_nom != ''){
+        $sql .= " and emp_nom like '%$this->emp_nom%' ";
+    }
+
+    if($this->emp_dpi != ''){
+        $sql .= " and emp_dpi = $this->emp_dpi ";
+    }
+
+    if($this->emp_cod != null){
+        $sql .= " and emp_cod = $this->emp_cod ";
+    }
+
+    $resultado = self::servir($sql);
+    return $resultado;
+}
     //===================================================================================
     public function modificar(){
         $sql = "UPDATE empleados SET emp_nom = '$this->emp_nom', emp_dpi = $this->emp_dpi where emp_cod = $this->emp_cod";
@@ -78,3 +95,5 @@ class empleados extends Conexion{
         return $resultado;
     }
 }
+
+

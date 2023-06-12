@@ -44,7 +44,7 @@ try {
                         <tr>
                             <td><?= $key + 1 ?></td>
                             <td><?= $empleado['EMP_NOM'] ?></td>
-                            <td><a class="btn btn-warning w-100" href="/crud_practica9/vistas/productos/modificar.php?producto_id=<?= $producto['PRODUCTO_ID']?>">Modificar</a></td>
+                            <td><a class="btn btn-warning w-100" href="/Final_Reyes/vistas/lista/modificar.php?emp_cod=<?= $empleado['EMP_COD']?>">Modificar</a></td>
                             <td><a class="btn btn-danger w-100" href="/crud_practica9/controladores/productos/eliminar.php?producto_id=<?= $producto['PRODUCTO_ID']?>">Eliminar</a></td>
                         </tr>
                         <?php endforeach ?>
