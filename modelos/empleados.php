@@ -102,7 +102,7 @@ public function buscar2(){
 
     //===================================================================================
     public function modificar(){
-        $sql = "UPDATE empleados SET emp_nom = '$this->emp_nom', emp_dpi = $this->emp_dpi where emp_cod = $this->emp_cod";
+        $sql = "UPDATE empleados SET emp_nom = '$this->emp_nom', emp_dpi = '$this->emp_dpi', emp_edad = '$this->emp_edad' where emp_cod = $this->emp_cod";
         
         $resultado = self::ejecutar($sql);
         return $resultado;

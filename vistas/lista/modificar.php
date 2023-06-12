@@ -35,6 +35,12 @@ require '../../modelos/empleados.php';
                     </div>
                 </div>
                 <div class="row mb-3">
+                    <div class="col">
+                        <label for="emp_edad">EDAD</label>
+                        <input type="number" min="1" name="emp_edad" id="emp_edad" class="form-control" value="<?= $empleados[0]['EMP_EDAD'] ?>">
+                    </div>
+                </div>
+                <div class="row mb-3">
                 <div class="row mb-3">
                     <div class="col">
                         <button type="submit" class="btn btn-warning w-100">Modificar</button><br><br>
