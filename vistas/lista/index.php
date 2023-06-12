@@ -12,12 +12,6 @@
                 </div>
                 <div class="row mb-3">
                     <div class="col">
-                        <label for="emp_ape">Apellidos del Empleado</label>
-                        <input type="text" name="emp_ape" id="emp_ape" class="form-control">
-                    </div>
-                </div>
-                <div class="row mb-3">
-                    <div class="col">
                         <label for="emp_dpi">Documento de Identificacion DPI</label>
                         <input type="number" min="1" name="emp_dpi" id="emp_dpi" class="form-control">
                     </div>

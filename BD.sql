@@ -3,7 +3,6 @@ CREATE DATABASE empleados;
 CREATE TABLE empleados (
     emp_cod SERIAL NOT NULL,
     emp_nom VARCHAR(200) NOT NULL,
-    emp_ape VARCHAR(200) NOT NULL,
     emp_dpi BIGINT NOT NULL,
     emp_puesto_cod VARCHAR(50) NOT NULL,
     emp_edad INTEGER NOT NULL,

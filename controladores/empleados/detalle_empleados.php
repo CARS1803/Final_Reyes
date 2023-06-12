@@ -2,8 +2,8 @@
 require_once '../../modelos/empleados.php';
 
 try {
-    $venta = new empleados($_GET);
-    $ventas = $venta->buscar();
+    $empleado = new empleados($_GET);
+    $empleados = $empleado->buscar();
 } catch (PDOException $e) {
     $error = $e->getMessage();
 } catch (Exception $e2) {
@@ -96,17 +96,17 @@ try {
                     </tr>
                 </thead>
                 <tbody>
-                    <?php if (count($ventas) > 0) : ?>
-                        <?php foreach ($ventas as $key => $venta) : ?>
+                    <?php if (count($empleados) > 0) : ?>
+                        <?php foreach ($empleados as $key => $empleado) : ?>
                             <tr>
                                 <td><?= $key + 1 ?></td>
-                                <td><?= $venta['EMP_NOM'] ?></td>
-                                <td><?= $venta['EMP_DPI'] ?></td>
-                                <td><?= $venta['PUE_DESCR'] ?></td>
-                                <td><?= $venta['AREA_NOM'] ?></td>
-                                <td><?= $venta['EMP_EDAD'] ?></td>
-                                <td><?= $venta['SEX_DESCR'] ?></td>
-                                <td><?= $venta['SUELDO'] ?></td>
+                                <td><?= $empleado['EMP_NOM'] ?></td>
+                                <td><?= $empleado['EMP_DPI'] ?></td>
+                                <td><?= $empleado['PUE_DESCR'] ?></td>
+                                <td><?= $empleado['AREA_NOM'] ?></td>
+                                <td><?= $empleado['EMP_EDAD'] ?></td>
+                                <td><?= $empleado['SEX_DESCR'] ?></td>
+                                <td><?= $empleado['SUELDO'] ?></td>
                             </tr>
                         <?php endforeach ?>
                     <?php else : ?>

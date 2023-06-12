@@ -4,7 +4,6 @@ require_once 'Conexion.php';
 class empleados extends Conexion{
     public $emp_cod;
     public $emp_nom;
-    public $emp_ape;
     public $emp_dpi;
     public $emp_puesto_cod;
     public $emp_edad;
@@ -17,7 +16,6 @@ class empleados extends Conexion{
     {
         $this->emp_cod = $args['emp_cod'] ?? null;
         $this->emp_nom = $args['emp_nom'] ?? '';
-        $this->emp_ape = $args['emp_ape'] ?? '';
         $this->emp_dpi = $args['emp_dpi'] ?? '';
         $this->emp_puesto_cod = $args['emp_puesto_cod'] ?? '';
         $this->emp_edad = $args['emp_edad'] ?? '';
@@ -27,8 +25,8 @@ class empleados extends Conexion{
     }
 
     public function guardar(){
-        $sql = "INSERT INTO empleados(emp_nom,emp_ape,emp_dpi,emp_puesto_cod,emp_edad,emp_sex_cod,emp_area_cod) 
-                values('$this->emp_nom','$this->emp_ape','$this->emp_dpi','$this->emp_puesto_cod','$this->emp_edad','$this->emp_sex_cod','$this->emp_area_cod')";
+        $sql = "INSERT INTO empleados(emp_nom,emp_dpi,emp_puesto_cod,emp_edad,emp_sex_cod,emp_area_cod) 
+                values('$this->emp_nom','$this->emp_dpi','$this->emp_puesto_cod','$this->emp_edad','$this->emp_sex_cod','$this->emp_area_cod')";
         $resultado = self::ejecutar($sql);
         return $resultado;
     }
