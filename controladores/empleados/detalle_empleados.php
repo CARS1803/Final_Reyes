@@ -68,7 +68,7 @@ try {
                             <a class="nav-link" href="/Final_Reyes/vistas/area/buscar.php">Buscar Areas</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/Final_Reyes/vistas/area/buscar.php">Detalles de Areas</a>
+                            <a class="nav-link" href="/Final_Reyes/controladores/areas/detalle_areas.php">Detalles de Areas</a>
                         </li>
                     </ul>
                 </li>
