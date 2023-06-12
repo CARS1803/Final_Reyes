@@ -16,24 +16,7 @@ if($_POST['area_nom'] != ''){
         $error = $e2->getMessage();
     }
 }else{
-    $error = "Debe llenar todos los datos";
-}
-
-if($_POST['pue_descr'] != '' && $_POST['pue_suel'] != ''){
-
-
-
-    try {
-        $puestos = new puestos($_POST);
-        $resultado = $puestos->guardar();
-        $error = "NO se guardó correctamente";
-    } catch (PDOException $e) {
-        $error = $e->getMessage();
-    } catch (Exception $e2){
-        $error = $e2->getMessage();
-    }
-}else{
-    $error = "Los Datos Ingresados ya Existen o Dejo todos los campos Vacios";
+    $error = "Debe llenar todos los datos o Datos Repetidos";
 }
 ?>
 
