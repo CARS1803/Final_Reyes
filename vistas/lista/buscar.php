@@ -16,6 +16,7 @@
                         <button type="submit" class="btn btn-info w-100">Buscar</button>
                     </div>
                 </div>
+                <a href="/Final_Reyes/controladores/empleados/detalle_empleados.php" class="btn btn-warning w-100">Volver al Listado de Empleados</a>
             </form>
         </div>
     </div>

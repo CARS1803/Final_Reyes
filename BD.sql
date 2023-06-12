@@ -38,11 +38,3 @@ CREATE TABLE areas  (
     PRIMARY KEY(area_nom)
 )
 
-CREATE TABLE asignacion  ( 
-	asig_area_nom	VARCHAR(50) NOT NULL,
-	asig_emp_cod	INTEGER NOT NULL,
-    asig_situacion char (1) DEFAULT '1',
-    PRIMARY KEY(asig_area_nom, asig_emp_cod),
-    FOREIGN KEY (asig_area_nom) REFERENCES areas(area_nom),
-    FOREIGN KEY (asig_emp_cod) REFERENCES empleados(emp_cod)
-)

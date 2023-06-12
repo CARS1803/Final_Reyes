@@ -34,14 +34,17 @@
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Areas
+                        Areas y Puestos
                     </a>
                     <ul class="dropdown-menu bg-dark">
                         <li class="nav-item">
-                            <a class="nav-link" href="/Final_Reyes/vistas/area/index.php">Crear Area</a>
+                            <a class="nav-link" href="/Final_Reyes/vistas/area/index.php">Crear Areas y Puestos</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/Final_Reyes/vistas/area/buscar.php">Buscar Area</a>
+                            <a class="nav-link" href="/Final_Reyes/vistas/area/buscar.php">Modificar Areas</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/Final_Reyes/vistas/area/buscar.php">Detalles de Areas</a>
                         </li>
                     </ul>
                 </li>

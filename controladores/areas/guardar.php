@@ -1,6 +1,6 @@
 <?php
 require '../../modelos/areas.php';
-
+require '../../modelos/puestos.php';
 
 if($_POST['area_nom'] != ''){
 
@@ -19,14 +19,24 @@ if($_POST['area_nom'] != ''){
     $error = "Debe llenar todos los datos";
 }
 
+if($_POST['pue_descr'] != '' && $_POST['pue_suel'] != ''){
 
-// if($resultado){
-//     echo "Guardado exitosamente";
-// }else{
-//     echo "Ocurrió un error: $error";
-// }
 
+
+    try {
+        $puestos = new puestos($_POST);
+        $resultado = $puestos->guardar();
+        $error = "NO se guardó correctamente";
+    } catch (PDOException $e) {
+        $error = $e->getMessage();
+    } catch (Exception $e2){
+        $error = $e2->getMessage();
+    }
+}else{
+    $error = "Debe llenar todos los datos";
+}
 ?>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
