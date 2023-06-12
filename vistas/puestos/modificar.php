@@ -5,11 +5,6 @@ require '../../modelos/puestos.php';
         $puesto = new puestos($_GET);
 
         $puestos = $puesto->buscar2();
-        // echo "<pre>";
-        // var_dump($empleados[0]['EMP_COD']);
-        // echo "</pre>";
-        // exit;
-        // $error = "NO se guardó correctamente";
     } catch (PDOException $e) {
         $error = $e->getMessage();
     } catch (Exception $e2){
