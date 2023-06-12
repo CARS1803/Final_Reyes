@@ -1,3 +1,4 @@
+<br><br>
 <?php
 require '../../modelos/empleados.php';
     try {
@@ -36,10 +37,12 @@ require '../../modelos/empleados.php';
                 <div class="row mb-3">
                 <div class="row mb-3">
                     <div class="col">
-                        <button type="submit" class="btn btn-warning w-100">Modificar</button>
+                        <button type="submit" class="btn btn-warning w-100">Modificar</button><br><br>
+                        <a href="/Final_Reyes/vistas/lista/buscar.php" class="btn btn-info w-100">Volver al formulario</a>
+            </form>
                     </div>
                 </div>
-            </form>
+                
         </div>
     </div>
 <?php include_once '../../includes/footer.php'?>

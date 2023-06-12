@@ -89,6 +89,7 @@ try {
                         <th>EMPLEADO</th>
                         <th>DPI</th>
                         <th>PUESTO</th>
+                        <th>AREA</th>
                         <th>EDAD</th>
                         <th>SEXO</th>
                         <th>SUELDO</th>
@@ -102,6 +103,7 @@ try {
                                 <td><?= $venta['EMP_NOM'] ?></td>
                                 <td><?= $venta['EMP_DPI'] ?></td>
                                 <td><?= $venta['PUE_DESCR'] ?></td>
+                                <td><?= $venta['AREA_NOM'] ?></td>
                                 <td><?= $venta['EMP_EDAD'] ?></td>
                                 <td><?= $venta['SEX_DESCR'] ?></td>
                                 <td><?= $venta['SUELDO'] ?></td>
