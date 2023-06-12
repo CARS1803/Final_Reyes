@@ -151,7 +151,7 @@ try {
         <div class="col-lg-4">
             <a href="/Final_Reyes/vistas/lista/buscar.php" class="btn btn-warning w-100">Buscar Empleado</a>
             <br><br>
-            <a href="/Final_Reyes/vistas/lista/index.php" class="btn btn-info w-100">Volver al formulario</a>
+            <a href="/Final_Reyes/vistas/lista/index.php" class="btn btn-info w-100">Empleado Nuevo</a>
         </div>
     </div>
 </div>
