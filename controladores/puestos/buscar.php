@@ -1,8 +1,8 @@
 <?php
-require '../../modelos/areas.php';
+require '../../modelos/puestos.php';
 try {
-    $area = new areas($_GET);
-    $areas = $area->buscar();
+    $puesto = new puestos($_GET);
+    $puestos = $puesto->buscar();
     // echo "<pre>";
     // var_dump($empleados);
     // echo "</pre>";
@@ -34,18 +34,18 @@ try {
                     <thead class="table-dark">
                         <tr>
                             <th>NO.</th>
-                            <th>NOMBRE DE AREA</th>
+                            <th>NOMBRE DEL PUESTO</th>
                             <th>MODIFICAR</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <?php if(count($areas) > 0):?>
-                        <?php foreach($areas as $key => $area) : ?>
+                        <?php if(count($puestos) > 0):?>
+                        <?php foreach($puestos as $key => $puesto) : ?>
 
                         <tr>
                             <td><?= $key + 1 ?></td>
-                            <td><?= $area['AREA_NOM'] ?></td>
-                            <td><a class="btn btn-warning w-100" href="/Final_Reyes/vistas/area/modificar.php?area_cod=<?= $area['AREA_COD']?>">Modificar</a></td>
+                            <td><?= $puesto['PUE_DESCR'] ?></td>
+                            <td><a class="btn btn-warning w-100" href="/Final_Reyes/vistas/puestos/modificar.php?pue_cod=<?= $puesto['PUE_COD']?>">Modificar</a></td>
                         </tr>
                         <?php endforeach ?>
                         <?php else :?>
@@ -60,7 +60,7 @@ try {
         </div>
         <div class="row justify-content-center">
             <div class="col-lg-4">
-                <a href="/Final_Reyes/vistas/area/buscar.php" class="btn btn-info w-100">Volver al formulario</a>
+                <a href="/Final_Reyes/vistas/puestos/buscar.php" class="btn btn-info w-100">Volver al formulario</a>
             </div>
         </div>
     </div>

@@ -58,7 +58,7 @@
                             <a class="nav-link" href="/Final_Reyes/vistas/puestos/index.php">Crear Puestos</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/Final_Reyes/vistas/area/buscar.php">Buscar Puestos</a>
+                            <a class="nav-link" href="/Final_Reyes/vistas/puestos/buscar.php">Buscar Puestos</a>
                         </li>
                     </ul>
                 </li>

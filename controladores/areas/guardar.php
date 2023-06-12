@@ -11,7 +11,11 @@ if($_POST['area_nom'] != ''){
         $resultado = $areas->guardar();
         $error = "NO se guardó correctamente";
     } catch (PDOException $e) {
-        $error = $e->getMessage();
+        $errorCode = $e->getCode();
+        switch ($errorCode) {
+            case 23000:
+                $error = "Dato repetido. Verifica que los datos ingresados no estén duplicados.";
+                break;}
     } catch (Exception $e2){
         $error = $e2->getMessage();
     }

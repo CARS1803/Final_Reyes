@@ -29,17 +29,34 @@ class puestos extends Conexion{
     //==============================================================================
     public function buscar()
     {
-        $sql = "SELECT pue_cod, pue_descr FROM puestos WHERE pue_situacion = 1";
+        $sql = "SELECT pue_cod, pue_descr, pue_suel FROM puestos WHERE pue_situacion = 1";
+    
+        if ($this->pue_descr != '') {
+            $sql .= " AND pue_descr LIKE '%$this->pue_descr%' ";
+        }
+
+        $resultado = self::servir($sql);
+        return $resultado;
+    }
+
+    public function buscar2(){
+        $sql = "SELECT * from puestos where pue_situacion = 1 ";
+    
+        if($this->pue_descr != ''){
+            $sql .= " and pue_descr like '%$this->pue_descr%' ";
+        }
+        if($this->pue_cod != null){
+            $sql .= " and pue_cod = $this->pue_cod ";
+        }
     
         $resultado = self::servir($sql);
         return $resultado;
     }
-    
 
 
     //===================================================================================
     public function modificar(){
-        $sql = "UPDATE puestos SET pue_descr = '$this->pue_descr', pue_suel = $this->pue_suel where pue_cod = $this->pue_cod";
+        $sql = "UPDATE puestos SET pue_descr = '$this->pue_descr', pue_suel = '$this->pue_suel' where pue_cod = $this->pue_cod";
         
         $resultado = self::ejecutar($sql);
         return $resultado;
