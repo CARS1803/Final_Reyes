@@ -2,12 +2,13 @@
 <?php include_once '../../includes/navbar.php'?>
 <?php
 require_once '../../modelos/puestos.php';
-
+require_once '../../modelos/areas.php';
     try {
         $puesto = new puestos();
-
         $puestos = $puesto->buscar();
 
+        $area = new areas();
+        $areas = $area->buscar();
             // var_dump($clientes);
             // exit;
     } catch (PDOException $e) {
@@ -37,7 +38,7 @@ require_once '../../modelos/puestos.php';
                     <div class="col">
                         <label for="pue_descr">Puesto a Desempeñar</label>
                         <select name="pue_descr" id="pue_descr" class="form-control">
-                            <option value="">Seleccione el Puesto</option>
+                            <option value="">Seleccione...</option>
                             <?php foreach ($puestos as $key => $puesto) : ?>
                                 <option value="<?= $puesto['PUE_COD'] ?>"><?= $puesto['PUE_DESCR'] ?></option>
                             <?php endforeach?>
@@ -58,16 +59,19 @@ require_once '../../modelos/puestos.php';
                             <option value="Femenino">Femenino</option>
                         </select>
                 </div>
+                
                 <div class="row mb-3">
                     <div class="col">
-                        <label for="emp_area_cod">Area a Desempeñar</label>
-                        <select name="emp_area_cod" id="emp_area_cod" class="form-control">
-                            <option value="Recursos Humanos">Recursos Humanos</option>
-                            <option value="Logistica">Logistica</option>
-                            <option value="Inteligencia">Inteligencia</option>
+                        <label for="area_nom">Puesto a Desempeñar</label>
+                        <select name="area_nom" id="area_nom" class="form-control">
+                            <option value="">Seleccione...</option>
+                            <?php foreach ($areas as $key => $area) : ?>
+                                <option value="<?= $area['AREA_COD'] ?>"><?= $area['AREA_NOM'] ?></option>
+                            <?php endforeach?>
                         </select>
                     </div>
                 </div>
+
                 <div class="row mb-3">
                     <div class="col">
                         <button type="submit" class="btn btn-primary w-100">Guardar</button>
