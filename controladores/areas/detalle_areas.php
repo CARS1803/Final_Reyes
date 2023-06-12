@@ -108,42 +108,104 @@ try {
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-lg-8">
-            <h1 class="text-center">Listado de Empleados</h1>
-            <br><br>
-            <table class="table table-bordered table-hover">
-                <thead class="table-dark">
-                    <tr>
-                        <th>NO.</th>
-                        <th>EMPLEADO</th>
-                        <th>DPI</th>
-                        <th>PUESTO</th>
-                        <th>AREA</th>
-                        <th>EDAD</th>
-                        <th>SEXO</th>
-                        <th>SUELDO</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <?php if (count($empleados) > 0) : ?>
-                        <?php foreach ($empleados as $key => $empleado) : ?>
-                            <tr>
-                                <td><?= $key + 1 ?></td>
-                                <td><?= $empleado['EMP_NOM'] ?></td>
-                                <td><?= $empleado['EMP_DPI'] ?></td>
-                                <td><?= $empleado['PUE_DESCR'] ?></td>
-                                <td><?= $empleado['AREA_NOM'] ?></td>
-                                <td><?= $empleado['EMP_EDAD'] ?></td>
-                                <td><?= $empleado['SEX_DESCR'] ?></td>
-                                <td><?= $empleado['SUELDO'] ?></td>
-                            </tr>
-                        <?php endforeach ?>
-                    <?php else : ?>
+            <br><h1 class="text-center">Listado de Empleados De Empleados por Areas</h1>
+            <br>
+            <style>
+    .areas-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        margin-top: 20px;
+    }
+
+    .area {
+        width: 100%;
+        max-width: 800px;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        background-color: #f9f9f9;
+    }
+
+    .area h3 {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .area table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    .area th,
+    .area td {
+        padding: 8px;
+        text-align: center;
+        border: 1px solid #ccc;
+    }
+
+    .area thead {
+        background-color: #333;
+        color: #fff;
+    }
+
+    .area tbody tr:hover {
+        background-color: #f5f5f5;
+    }
+
+    .no-records {
+        text-align: center;
+        margin-top: 20px;
+        font-style: italic;
+    }
+</style>
+
+<?php if (count($empleados) > 0) : ?>
+    <div class="areas-container">
+        <?php $areas = array(); ?>
+        <?php foreach ($empleados as $empleado) : ?>
+            <?php $areas[] = $empleado['AREA_NOM']; ?>
+        <?php endforeach ?>
+        <?php $areas = array_unique($areas); ?>
+        <?php foreach ($areas as $area) : ?>
+            <div class="area">
+                <h3><?= $area ?></h3>
+                <table>
+                    <thead>
                         <tr>
-                            <td colspan="7">NO EXISTEN REGISTROS</td>
+                            <th>NO.</th>
+                            <th>EMPLEADO</th>
+                            <th>DPI</th>
+                            <th>PUESTO</th>
+                            <th>EDAD</th>
+                            <th>SEXO</th>
+                            <th>SUELDO</th>
                         </tr>
-                    <?php endif ?>
-                </tbody>
-            </table>
+                    </thead>
+                    <tbody>
+                        <?php foreach ($empleados as $key => $empleado) : ?>
+                            <?php if ($empleado['AREA_NOM'] == $area) : ?>
+                                <tr>
+                                    <td><?= $key + 1 ?></td>
+                                    <td><?= $empleado['EMP_NOM'] ?></td>
+                                    <td><?= $empleado['EMP_DPI'] ?></td>
+                                    <td><?= $empleado['PUE_DESCR'] ?></td>
+                                    <td><?= $empleado['EMP_EDAD'] ?></td>
+                                    <td><?= $empleado['SEX_DESCR'] ?></td>
+                                    <td><?= $empleado['SUELDO'] ?></td>
+                                </tr>
+                            <?php endif ?>
+                        <?php endforeach ?>
+                    </tbody>
+                </table>
+            </div>
+        <?php endforeach ?>
+    </div>
+<?php else : ?>
+    <p class="no-records">NO EXISTEN REGISTROS</p>
+<?php endif ?>
+
         </div>
     </div>
     <br>
