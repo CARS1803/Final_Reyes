@@ -11,7 +11,7 @@
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Lista
+                        Listado de Empleados
                     </a>
                     <ul class="dropdown-menu bg-dark">
                         <li class="nav-item">
@@ -24,7 +24,7 @@
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Ingreso de Datos
+                    Ingreso de Empleados
                     </a>
                     <ul class="dropdown-menu bg-dark">
                         <li class="nav-item">
@@ -34,23 +34,49 @@
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Areas y Puestos
+                        Areas
                     </a>
                     <ul class="dropdown-menu bg-dark">
                         <li class="nav-item">
-                            <a class="nav-link" href="/Final_Reyes/vistas/area/index.php">Crear Areas y Puestos</a>
+                            <a class="nav-link" href="/Final_Reyes/vistas/area/index.php">Crear Areas</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="/Final_Reyes/vistas/area/buscar.php">Buscar Areas</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/Final_Reyes/vistas/area/buscar.php">Buscar Puestos</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="/Final_Reyes/vistas/area/buscar.php">Detalles de Areas</a>
                         </li>
                     </ul>
                 </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Puestos
+                    </a>
+                    <ul class="dropdown-menu bg-dark">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/Final_Reyes/vistas/area/index.php">Crear Puestos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/Final_Reyes/vistas/area/buscar.php">Buscar Puestos</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Generos
+                    </a>
+                    <ul class="dropdown-menu bg-dark">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/Final_Reyes/vistas/area/index.php">Crear Genero</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/Final_Reyes/vistas/area/buscar.php">Buscar Genero</a>
+                        </li>
+                    </ul>
+                </li>
+
             </ul>
         </div>
     </div>

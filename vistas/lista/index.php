@@ -36,11 +36,11 @@ require_once '../../modelos/areas.php';
                 
                 <div class="row mb-3">
                     <div class="col">
-                        <label for="pue_descr">Puesto a Desempeñar</label>
-                        <select name="pue_descr" id="pue_descr" class="form-control">
+                        <label for="emp_puesto_cod">Puesto a Desempeñar</label>
+                        <select name="emp_puesto_cod" id="emp_puesto_cod" class="form-control">
                             <option value="">Seleccione...</option>
                             <?php foreach ($puestos as $key => $puesto) : ?>
-                                <option value="<?= $puesto['PUE_COD'] ?>"><?= $puesto['PUE_DESCR'] ?></option>
+                                <option value="<?= $puesto['PUE_DESCR'] ?>"><?= $puesto['PUE_DESCR'] ?></option>
                             <?php endforeach?>
                         </select>
                     </div>
@@ -62,11 +62,11 @@ require_once '../../modelos/areas.php';
                 
                 <div class="row mb-3">
                     <div class="col">
-                        <label for="area_nom">Puesto a Desempeñar</label>
-                        <select name="area_nom" id="area_nom" class="form-control">
+                        <label for="emp_area_cod">Area de Asignacion</label>
+                        <select name="emp_area_cod" id="emp_area_cod" class="form-control">
                             <option value="">Seleccione...</option>
                             <?php foreach ($areas as $key => $area) : ?>
-                                <option value="<?= $area['AREA_COD'] ?>"><?= $area['AREA_NOM'] ?></option>
+                                <option value="<?= $area['AREA_NOM'] ?>"><?= $area['AREA_NOM'] ?></option>
                             <?php endforeach?>
                         </select>
                     </div>

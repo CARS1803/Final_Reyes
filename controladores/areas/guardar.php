@@ -33,7 +33,7 @@ if($_POST['pue_descr'] != '' && $_POST['pue_suel'] != ''){
         $error = $e2->getMessage();
     }
 }else{
-    $error = "Debe llenar todos los datos";
+    $error = "Los Datos Ingresados ya Existen o Dejo todos los campos Vacios";
 }
 ?>
 

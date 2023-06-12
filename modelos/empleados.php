@@ -22,6 +22,8 @@ class empleados extends Conexion{
         $this->emp_sex_cod = $args['emp_sex_cod'] ?? '';
         $this->emp_area_cod = $args['emp_area_cod'] ?? '';
         $this->emp_situacion = $args['emp_situacion'] ?? '';
+        $this->area_nom = $args['area_nom'] ?? '';
+        $this->pue_descr = $args['pue_descr'] ?? '';
     }
 
     public function guardar(){
@@ -46,6 +48,18 @@ class empleados extends Conexion{
         $sql .= " AND emp_nom LIKE '%$this->emp_nom%' ";
     }
 
+    if ($this->area_nom != '') {
+        $sql .= " AND area_nom LIKE '%$this->area_nom%' ";
+    }
+
+    if ($this->pue_descr != '') {
+        $sql .= " AND pue_descr LIKE '%$this->pue_descr%' ";
+    }
+
+    if ($this->pue_descr != '') {
+        $sql .= " AND pue_descr LIKE '%$this->pue_descr%' ";
+    }
+
     if ($this->emp_dpi != '') {
         $sql .= " AND emp_dpi = $this->emp_dpi ";
     }
@@ -68,7 +82,7 @@ public function buscar2(){
     if($this->emp_dpi != ''){
         $sql .= " and emp_dpi = $this->emp_dpi ";
     }
-
+ 
     if($this->emp_cod != null){
         $sql .= " and emp_cod = $this->emp_cod ";
     }

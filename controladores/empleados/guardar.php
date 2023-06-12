@@ -18,7 +18,7 @@ if($_POST['emp_nom'] != '' && $_POST['emp_dpi'] != ''
         $error = $e2->getMessage();
     }
 }else{
-    $error = "Debe llenar todos los datos";
+    $error = "Debe llenar todos los datos o Crear Areas, Puesto o Generos";
 }
 
 

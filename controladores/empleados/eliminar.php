@@ -47,7 +47,7 @@ require '../../modelos/empleados.php';
         </div>
         <div class="row">
             <div class="col-lg-4">
-                <a href="/crud_practica9/controladores/productos/buscar.php" class="btn btn-info">Volver al formulario</a>
+                <a href="/Final_Reyes/controladores/Empleados/buscar.php" class="btn btn-info">Volver al formulario</a>
             </div>
         </div>
     </div>
