@@ -3,7 +3,6 @@
 require '../../modelos/generos.php';
     try {
         $genero = new Generos($_GET);
-
         $generos = $genero->buscar2();
         // echo "<pre>";
         // var_dump($empleados[0]['EMP_COD']);
@@ -25,7 +24,7 @@ require '../../modelos/generos.php';
                 <div class="row mb-3">
                     <div class="col">
                         <label for="sex_descr">Nombre del Genero</label>
-                        <input type="text" name="sex_descr" id="sex_descr" class="form-control" value="<?= $generos[0]['SEX_DESCR'] ?>">
+                        <input type="text" name="sex_descr" id="sex_descr"  class="form-control" value="<?= $generos[0]['SEX_DESCR'] ?>">
                     </div>
                 </div>
 

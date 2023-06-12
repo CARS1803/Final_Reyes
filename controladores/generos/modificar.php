@@ -5,7 +5,6 @@ require '../../modelos/generos.php';
 if($_POST['sex_descr'] != ''){
 
 
-
     try {
         $genero = new Generos($_POST);
         $resultado = $genero->modificar();
@@ -18,13 +17,6 @@ if($_POST['sex_descr'] != ''){
 }else{
     $error = "Debe llenar todos los datos";
 }
-
-
-// if($resultado){
-//     echo "Guardado exitosamente";
-// }else{
-//     echo "Ocurrió un error: $error";
-// }
 
 ?>
 <!DOCTYPE html>

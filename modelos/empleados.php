@@ -98,6 +98,12 @@ public function buscar2(){
         return $resultado;
     }
 
+    public function modificar2(){
+        $sql = "UPDATE empleados SET emp_sex_cod = '$this->emp_sex_cod'";
+        
+        $resultado = self::ejecutar($sql);
+        return $resultado;
+    }
 
     //======================================================================================
     public function eliminar(){
