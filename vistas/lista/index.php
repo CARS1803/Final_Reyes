@@ -44,7 +44,7 @@ require_once '../../modelos/generos.php';
                         <select name="emp_puesto_cod" id="emp_puesto_cod" class="form-control">
                             <option value="">Seleccione...</option>
                             <?php foreach ($puestos as $key => $puesto) : ?>
-                                <option value="<?= $puesto['PUE_DESCR'] ?>"><?= $puesto['PUE_DESCR'] ?></option>
+                                <option value="<?= $puesto['PUE_COD'] ?>"><?= $puesto['PUE_DESCR'] ?></option>
                             <?php endforeach?>
                         </select>
                     </div>
@@ -62,7 +62,7 @@ require_once '../../modelos/generos.php';
                         <select name="emp_sex_cod" id="emp_sex_cod" class="form-control">
                             <option value="">Seleccione...</option>
                             <?php foreach ($generos as $key => $genero) : ?>
-                                <option value="<?= $genero['SEX_DESCR'] ?>"><?= $genero['SEX_DESCR'] ?></option>
+                                <option value="<?= $genero['SEX_COD'] ?>"><?= $genero['SEX_DESCR'] ?></option>
                             <?php endforeach?>
                         </select>
                     </div>
@@ -74,7 +74,7 @@ require_once '../../modelos/generos.php';
                         <select name="emp_area_cod" id="emp_area_cod" class="form-control">
                             <option value="">Seleccione...</option>
                             <?php foreach ($areas as $key => $area) : ?>
-                                <option value="<?= $area['AREA_NOM'] ?>"><?= $area['AREA_NOM'] ?></option>
+                                <option value="<?= $area['AREA_COD'] ?>"><?= $area['AREA_NOM'] ?></option>
                             <?php endforeach?>
                         </select>
                     </div>
