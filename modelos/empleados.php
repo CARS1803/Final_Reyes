@@ -73,23 +73,33 @@ class empleados extends Conexion{
 }
 
 public function buscar2(){
-    $sql = "SELECT * from empleados where emp_situacion = 1 ";
+    $sql = "SELECT empleados.emp_cod, empleados.emp_nom, empleados.emp_dpi, puestos.pue_descr, empleados.emp_edad, sexo.sex_descr, puestos.pue_suel AS sueldo, areas.area_nom
+    FROM empleados
+    JOIN puestos ON empleados.emp_puesto_cod = puestos.pue_cod
+    JOIN sexo ON empleados.emp_sex_cod = sexo.sex_cod
+    JOIN areas ON empleados.emp_area_cod = areas.area_cod
+    WHERE empleados.emp_situacion = 1 AND puestos.pue_situacion = 1
+        ";
 
     if($this->emp_nom != ''){
-        $sql .= " and emp_nom like '%$this->emp_nom%' ";
+        $sql .= " and empleados.emp_nom like '%$this->emp_nom%' ";
     }
 
-    if($this->emp_dpi != ''){
-        $sql .= " and emp_dpi = $this->emp_dpi ";
+    if($this->pue_descr != ''){
+        $sql .= " and puestos.pue_descr like '%$this->pue_descr%' ";
     }
  
-    if($this->emp_cod != null){
-        $sql .= " and emp_cod = $this->emp_cod ";
+    if($this->area_nom != ''){
+        $sql .= " and areas.area_nom like '%$this->area_nom%' ";
     }
+
+
 
     $resultado = self::servir($sql);
     return $resultado;
 }
+
+
     //===================================================================================
     public function modificar(){
         $sql = "UPDATE empleados SET emp_nom = '$this->emp_nom', emp_dpi = $this->emp_dpi where emp_cod = $this->emp_cod";

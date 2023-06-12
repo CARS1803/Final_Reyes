@@ -29,22 +29,22 @@ require_once '../../modelos/puestos.php';
                 </div>
                 <div class="row mb-3">
                     <div class="col">
-                        <label for="area_nom">Area de Asignacion</label>
-                        <select name="area_nom" id="area_nom" class="form-control">
+                        <label for="pue_descr">Puesto que Desempeña</label>
+                        <select name="pue_descr" id="pue_descr" class="form-control">
                             <option value="">Seleccione...</option>
-                            <?php foreach ($areas as $key => $area) : ?>
-                                <option value="<?= $area['AREA_NOM'] ?>"><?= $area['AREA_NOM'] ?></option>
+                            <?php foreach ($puestos as $key => $puesto) : ?>
+                                <option value="<?= $puesto['PUE_DESCR'] ?>"><?= $puesto['PUE_DESCR'] ?></option>
                             <?php endforeach?>
                         </select>
                     </div>
                 </div>
                 <div class="row mb-3">
                     <div class="col">
-                        <label for="pue_descr">Puesto que Desempeña</label>
-                        <select name="pue_descr" id="pue_descr" class="form-control">
+                        <label for="area_nom">Area de Asignacion</label>
+                        <select name="area_nom" id="area_nom" class="form-control">
                             <option value="">Seleccione...</option>
-                            <?php foreach ($puestos as $key => $puesto) : ?>
-                                <option value="<?= $puesto['PUE_DESCR'] ?>"><?= $puesto['PUE_DESCR'] ?></option>
+                            <?php foreach ($areas as $key => $area) : ?>
+                                <option value="<?= $area['AREA_NOM'] ?>"><?= $area['AREA_NOM'] ?></option>
                             <?php endforeach?>
                         </select>
                     </div>

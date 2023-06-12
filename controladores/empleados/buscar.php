@@ -1,9 +1,8 @@
 <?php
 require '../../modelos/empleados.php';
-require '../../modelos/areas.php';
 try {
     $empleado = new empleados($_GET);
-    $empleados = $empleado->buscar();
+    $empleados = $empleado->buscar2();
     // echo "<pre>";
     // var_dump($empleados);
     // echo "</pre>";
