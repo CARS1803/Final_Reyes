@@ -1,7 +1,7 @@
 <?php
 require_once 'Conexion.php';
 
-class sexo extends Conexion{
+class Generos extends Conexion{
     public $sex_cod;
     public $sex_descr;
     public $sex_situacion;
@@ -16,8 +16,8 @@ class sexo extends Conexion{
     }
 
     public function guardar(){
-        $sql = "INSERT INTO sexo(sex_cod,sex_descr) 
-                values('$this->sex_cod','$this->sex_descr')";
+        $sql = "INSERT INTO sexo(sex_descr) 
+                values('$this->sex_descr')";
         $resultado = self::ejecutar($sql);
         return $resultado;
     }
