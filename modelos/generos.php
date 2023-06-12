@@ -1,6 +1,6 @@
 <?php
 require_once 'Conexion.php';
-
+require 'empleados.php';
 class Generos extends Conexion{
     public $sex_cod;
     public $sex_descr;
@@ -39,6 +39,20 @@ class Generos extends Conexion{
         return $resultado;
     }
 
+    public function buscar2(){
+        $sql = "SELECT * from sexo where sex_situacion = 1 ";
+    
+        if($this->sex_descr != ''){
+            $sql .= " and sex_descr like '%$this->sex_descr%' ";
+        }
+        if($this->sex_cod != null){
+            $sql .= " and sex_cod = $this->sex_cod ";
+        }
+    
+        $resultado = self::servir($sql);
+        return $resultado;
+    }
+    
 
     //===================================================================================
     public function modificar(){

@@ -1,14 +1,14 @@
 <?php
-require '../../modelos/puestos.php';
+require '../../modelos/generos.php';
 
 
-if($_POST['pue_descr'] != ''){
+if($_POST['sex_descr'] != ''){
 
 
 
     try {
-        $puesto = new puestos($_POST);
-        $resultado = $puesto->modificar();
+        $genero = new Generos($_POST);
+        $resultado = $genero->modificar();
 
     } catch (PDOException $e) {
         $error = $e->getMessage();
@@ -53,7 +53,7 @@ if($_POST['pue_descr'] != ''){
         </div>
         <div class="row">
             <div class="col-lg-4">
-                <a href="/Final_Reyes/controladores/puestos/buscar.php?area_nom=<?= $_POST['area_nom'] ?>" class="btn btn-info">Volver al formulario</a>
+                <a href="/Final_Reyes/controladores/generos/buscar.php?sex_descr=<?= $_POST['sex_descr'] ?>" class="btn btn-info">Volver al formulario</a>
             </div>
         </div>
     </div>

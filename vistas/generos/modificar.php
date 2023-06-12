@@ -1,10 +1,15 @@
 <br><br>
 <?php
-require '../../modelos/puestos.php';
+require '../../modelos/generos.php';
     try {
-        $puesto = new puestos($_GET);
+        $genero = new Generos($_GET);
 
-        $puestos = $puesto->buscar2();
+        $generos = $genero->buscar2();
+        // echo "<pre>";
+        // var_dump($empleados[0]['EMP_COD']);
+        // echo "</pre>";
+        // exit;
+        // $error = "NO se guardó correctamente";
     } catch (PDOException $e) {
         $error = $e->getMessage();
     } catch (Exception $e2){
@@ -13,26 +18,21 @@ require '../../modelos/puestos.php';
 ?>
 <?php include_once '../../includes/header.php'?>
     <div class="container">
-        <h1 class="text-center">Modificar Puesto</h1>
+        <h1 class="text-center">Modificar Genero</h1>
         <div class="row justify-content-center">
-            <form action="/Final_Reyes/controladores/puestos/modificar.php" method="POST" class="col-lg-8 border bg-light p-3">
-                <input type="hidden" name="pue_cod" value="<?= $puestos[0]['PUE_COD'] ?>" >
+            <form action="/Final_Reyes/controladores/generos/modificar.php" method="POST" class="col-lg-8 border bg-light p-3">
+                <input type="hidden" name="sex_cod" value="<?= $generos[0]['SEX_COD'] ?>" >
                 <div class="row mb-3">
                     <div class="col">
-                        <label for="pue_descr">Nombre del Puesto</label>
-                        <input type="text" name="pue_descr" id="pue_descr" class="form-control" value="<?= $puestos[0]['PUE_DESCR'] ?>">
+                        <label for="sex_descr">Nombre del Genero</label>
+                        <input type="text" name="sex_descr" id="sex_descr" class="form-control" value="<?= $generos[0]['SEX_DESCR'] ?>">
                     </div>
                 </div>
-                <div class="row mb-3">
-                    <div class="col">
-                        <label for="pue_suel">Sueldo del Puesto</label>
-                        <input type="number" min=1 name="pue_suel" id="pue_suel" class="form-control" value="<?= $puestos[0]['PUE_SUEL'] ?>">
-                    </div>
-                </div>
+
                 <div class="row mb-3">
                     <div class="col">
                         <button type="submit" class="btn btn-warning w-100">Modificar</button><br><br>
-                        <a href="/Final_Reyes/vistas/puestos/buscar.php" class="btn btn-info w-100">Volver al formulario</a>
+                        <a href="/Final_Reyes/vistas/generos/buscar.php" class="btn btn-info w-100">Volver al formulario</a>
             </form>
                     </div>
                 </div>
